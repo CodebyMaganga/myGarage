@@ -4,6 +4,7 @@ const selectModel = document.getElementById('carModel')
 const button = document.getElementById('findButton')
 const modalText = document.getElementById('modalText')
 const modalTitle = document.getElementById('exampleModalLabel')
+const headerButton = document.getElementById('headerButn')
 
 
 selectBrand.addEventListener('change', ()=>{
@@ -89,3 +90,8 @@ button.addEventListener('click', ()=>{
     })
 })
 
+headerButton.addEventListener('click', ()=>{
+    console.log('I have been clicked')
+    selectBrand.scrollIntoView({behavior: 'smooth'})
+    
+})
