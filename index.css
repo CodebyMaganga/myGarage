@@ -1,0 +1,40 @@
+
+
+.logo{
+    height: 100px;
+    width: 100px;
+    margin-left: 0px;
+}
+.logoName{
+    margin-right: 0px;
+    font-weight: 400;
+}
+.navbar{
+    box-shadow: 0 3px 9px 3px rgba(0, 0, 0, 0.1);
+}
+.navbar-brand span{
+    letter-spacing: 4px;
+}
+
+.nav-item{
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+}
+
+#header{
+    background: url(images/header/pexels-cottonbro-studio-4489712.jpg) top/cover no-repeat;
+}
+
+.headerButn{
+    background-color: whitesmoke;
+}
+
+.title h2::before{
+    position: absolute;
+    content: "";
+    width: 4px;
+    height: 50px;
+    background-color: black;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
