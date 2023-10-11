@@ -2,6 +2,9 @@ const BASE_URL = 'https://api.api-ninjas.com/v1/cars?'
 const selectBrand = document.getElementById('carBrand')
 const selectModel = document.getElementById('carModel')
 const button = document.getElementById('findButton')
+const modalText = document.getElementById('modalText')
+const modalTitle = document.getElementById('exampleModalLabel')
+
 
 selectBrand.addEventListener('change', ()=>{
     
@@ -55,5 +58,28 @@ button.addEventListener('click', ()=>{
 
     })
     .then((resp)=> resp.json())
-    .then(data => console.log(data))
+    .then((data) => {
+            const fuelType = document.createElement('p')
+            const engineCC = document.createElement('p')
+            const driveType = document.createElement('p')
+            const classType = document.createElement('p')
+
+            modalText.innerHTML = ''
+            modalTitle.textContent = ''
+
+            for (const car of data) {
+                fuelType.textContent = `Fuel Type: ${car.fuel_type}`
+                engineCC.textContent = `Engine CC: ${car.displacement}`
+                driveType.textContent = `Drive Type: ${car.drive}`
+                classType.textContent = `Class: ${car.class}`
+
+                modalTitle.textContent = `${car.make}-${car.model}`.toUpperCase()
+
+                modalText.appendChild(fuelType)
+                modalText.appendChild(engineCC)
+                modalText.appendChild(driveType)
+                modalText.appendChild(classType)
+
+            }
+    })
 })
