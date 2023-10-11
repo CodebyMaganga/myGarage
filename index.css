@@ -47,8 +47,30 @@ body{
     background: url(images/header/pexels-cottonbro-studio-4489712.jpg) top/cover no-repeat;
 }
 
+#findButton{
+    justify-content: center;
+    align-content: center;
+}
 
-.title h2::before{
+#selectContainer{
+    height: 150px;
+}
+#carouselContainer{
+    height: 150px;
+}
+
+#findText::before{
+    position: absolute;
+    content: "";
+    width: 4px;
+    height: 50px;
+    background-color: black;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#popularText::before{
     position: absolute;
     content: "";
     width: 4px;

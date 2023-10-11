@@ -50,37 +50,74 @@
 <!-----------------------------------------separator--------------------------------------------------------------------------->
     <section id="collection" class="py-5">
         <div class="container">
-            <div class="title text-centre">
-                <h2 class="position-relative d-inline-block">Find Your Car</h2>
+            <div class="row">
+                <div class="title col-md-6 text-centre">
+                    <h2 class="position-relative d-inline-block  ">Find Your Car</h2>
+                </div>
+                <div class="col-md-6 text-centre">
+                    <h2 class="position-relative d-inline-block ">Popular Brands</h2>
+                </div>
             </div>
+            
         </div>
     </section>
 
-    <select id="carBrand"class="form-select mt-5 py-3" aria-label="Default select example">
-        <option selected>Car Brand</option>
-        <option value="Alfa Romeo">Alfa Romeo</option>
-            <option value="Audi">Audi</option>
-            <option value="BMW">BMW</option>
-            <option value="Chevrolet">Chevrolet</option>
-            <option value="Ford">Ford</option>
-            <option value="Honda">Honda</option>
-            <option value="Hyundai">Hyundai</option>
-            <option value="Isuzu">Isuzu</option>
-            <option value="Jeep">Jeep</option>
-            <option value="Land Rover">Land Rover</option>
-            <option value="mercedes">Mercedes Benz</option>
-            <option value="Nissan">Nissan</option>
-            <option value="Suzuku">Suzuki</option>
-            <option value="Toyota">Toyota</option>
-            <option value="Volkswagen">Volkswagen</option>
-      </select>
+    <div class="container">
+        <div class="row justify-content-centre">
+            <div class="col-md-6" id="selectContainer">
+                <select id="carBrand"class="form-select py-3" aria-label="Default select example">
+                    <option selected>Car Brand</option>
+                    <option value="Alfa Romeo">Alfa Romeo</option>
+                        <option value="Audi">Audi</option>
+                        <option value="BMW">BMW</option>
+                        <option value="Chevrolet">Chevrolet</option>
+                        <option value="Ford">Ford</option>
+                        <option value="Honda">Honda</option>
+                        <option value="Hyundai">Hyundai</option>
+                        <option value="Isuzu">Isuzu</option>
+                        <option value="Jeep">Jeep</option>
+                        <option value="Land Rover">Land Rover</option>
+                        <option value="mercedes">Mercedes Benz</option>
+                        <option value="Nissan">Nissan</option>
+                        <option value="Suzuku">Suzuki</option>
+                        <option value="Toyota">Toyota</option>
+                        <option value="Volkswagen">Volkswagen</option>
+                  </select>
+            
+                  <select id="carModel"class="form-select mt-2 py-3" aria-label="Default select example">
+                    <option selected>Model</option> 
+                  </select>
+                  <button class="btn btn-primary mt-3" id="findButton" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Find</button>
+            </div>
 
-      <select id="carModel"class="form-select mt-2 py-3" aria-label="Default select example">
-        <option selected>Model</option> 
-      </select>
-
-        <button class="btn btn-primary mt-3 justify-content-center" id="findButton" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Find</button>
-
+            <div class="col-md-6" id="carouselContainer">
+                <div id="carouselExample" class="carousel slide">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="images/BODY IMAGES/Toyota-logo.png" class="d-block w-100 h-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="images/BODY IMAGES/subaru.jpg" class="d-block w-100 h-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="images/BODY IMAGES/th.jpg" class="d-block w-100 h-100" alt="...">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+            </div>
+    
+        </div>
+    </div>
+    
+        
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
               <div class="modal-content">
