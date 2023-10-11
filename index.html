@@ -37,8 +37,13 @@
     <header id="header" class="vh-100" style="padding-top: 200px;">
             <div class="container h-100 d-flex align-items-center justify-content-center">
                 <div class="text-center">
-                    <h2 id="headerTxt" class="text-capitalize text-white">Find Your Car</h2>
-                    <a href="" class="btn mt-3 text-uppercase headerButn">CLICK ME</a>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Explore Your Dream Ride</h5>
+                        <p>Discover 100+ Car Models in One Place and Uncover Your Car's Unique Specs.</p>
+                        <a href="" class="btn btn-warning mt-3 " id="headerButn">Discover More</a>
+                      </div>
+                
+                    
                 </div>
             </div>
     </header>
@@ -74,17 +79,16 @@
         <option selected>Model</option> 
       </select>
 
-        <button class="btn btn-primary" id="findButton" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Find</button>
+        <button class="btn btn-primary mt-3 justify-content-center" id="findButton" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Find</button>
 
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                  <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body" id="modalText">
-                  <img src="images/header/wassim-chouak-s4PhLThzUjk-unsplash.jpg" alt="" id="modalImage">
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

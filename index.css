@@ -1,4 +1,11 @@
+*{
+    font-family: montserrat;
+}
 
+body{
+    background: #f1fbff;
+
+}
 
 .logo{
     height: 100px;
@@ -20,13 +27,26 @@
     border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
 }
 
+.carousel-caption{
+    bottom: 220px;
+    z-index: 2;
+}
+.carousel-caption h5{
+    font-size: 45px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 25px;
+}
+.carousel-caption p{
+    width: 60%;
+    margin: auto;
+    font-size: 18px;
+}
+
 #header{
     background: url(images/header/pexels-cottonbro-studio-4489712.jpg) top/cover no-repeat;
 }
 
-.headerButn{
-    background-color: whitesmoke;
-}
 
 .title h2::before{
     position: absolute;

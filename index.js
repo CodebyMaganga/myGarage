@@ -35,7 +35,7 @@ selectBrand.addEventListener('change', ()=>{
         for (const car of data) {
             const option = document.createElement('option')
             option.value = car.model
-            option.textContent = car.model
+            option.textContent = `${car.model} ${car.year}`
 
             selectModel.appendChild(option)
 
@@ -63,23 +63,29 @@ button.addEventListener('click', ()=>{
             const engineCC = document.createElement('p')
             const driveType = document.createElement('p')
             const classType = document.createElement('p')
+            const fuelConsumption = document.createElement('p')
 
             modalText.innerHTML = ''
             modalTitle.textContent = ''
 
             for (const car of data) {
+                modalTitle.textContent = `${car.make}-${car.model}`.toUpperCase()
+
                 fuelType.textContent = `Fuel Type: ${car.fuel_type}`
-                engineCC.textContent = `Engine CC: ${car.displacement}`
+                engineCC.textContent = `Engine CC: ${(car.displacement) * 1000}`
                 driveType.textContent = `Drive Type: ${car.drive}`
                 classType.textContent = `Class: ${car.class}`
-
-                modalTitle.textContent = `${car.make}-${car.model}`.toUpperCase()
+                fuelConsumption.textContent = `Fuel Consumption: ${Math.round(((car.combination_mpg * 1.609) / 4.546))} litres/km`
 
                 modalText.appendChild(fuelType)
                 modalText.appendChild(engineCC)
                 modalText.appendChild(driveType)
                 modalText.appendChild(classType)
+                modalText.appendChild(fuelConsumption)
+
 
             }
+          
     })
 })
+
