@@ -59,25 +59,4 @@ body{
     height: 150px;
 }
 
-#findText::before{
-    position: absolute;
-    content: "";
-    width: 4px;
-    height: 50px;
-    background-color: black;
-    left: -10px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-#popularText::before{
-    position: absolute;
-    content: "";
-    width: 4px;
-    height: 50px;
-    background-color: black;
-    left: -10px;
-    top: 50%;
-    transform: translateY(-50%);
-}
 
