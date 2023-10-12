@@ -67,7 +67,7 @@ body{
 }
 
 #selectContainer{
-    height: 150px;
+    height: 14rem;
 }
 #carouselContainer{
     height: 150px;
@@ -93,3 +93,22 @@ body{
     background-color: #f1fbff;
     color: black
 }
+
+.card {
+    transition: transform 0.2s;
+}
+
+.card:hover{
+    transform: scale(1.10);
+}
+
+.underline{
+    text-decoration: underline;
+}
+
+#about, #contact{
+    border-top: 1px solid #000;
+    
+}
+
+
