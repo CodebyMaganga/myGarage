@@ -106,6 +106,21 @@ body{
     text-decoration: underline;
 }
 
+.title h2 {
+    position: relative;
+    display: inline;
+}
+
+.title h2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -10px;
+    border-left: 3px solid black;
+}
+
+
 #about{
     border-top: 1px solid #000;
     
