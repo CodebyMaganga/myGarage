@@ -1,3 +1,5 @@
+
+//Variables
 const BASE_URL = 'https://api.api-ninjas.com/v1/cars?'
 const selectBrand = document.getElementById('carBrand')
 const selectModel = document.getElementById('carModel')
@@ -9,20 +11,7 @@ const emailInput = document.getElementById('emailInput')
 const messageInput = document.getElementById('commentInput')
 const messageButton = document.getElementById('messageButton')
 
-
-
-messageButton.addEventListener('click', ()=>{
-    
-    if(!messageInput.value){
-        alert('Cant send an empty message')
-    }else{
-        alert('Your message has been sent.Thank you for contacting us')
-    }
-
-    
-})
-
-
+//Brand selection form
 selectBrand.addEventListener('change', ()=>{
     
     const value = selectBrand.value
@@ -61,6 +50,7 @@ selectBrand.addEventListener('change', ()=>{
     .catch(error => console.error('Error:', error))
 })
 
+//Find car model  according to API data
 button.addEventListener('click', ()=>{
     const brandValue = selectBrand.value
     const modelValue = selectModel.value
@@ -106,9 +96,21 @@ button.addEventListener('click', ()=>{
     })
 })
 
+//Scroll to form
 headerButton.addEventListener('click', ()=>{
     console.log('I have been clicked')
     selectBrand.scrollIntoView({behavior: 'smooth'})
     
 })
 
+//Send message
+messageButton.addEventListener('click', ()=>{
+    
+    if(!messageInput.value){
+        alert('Cant send an empty message')
+    }else{
+        alert('Your message has been sent.Thank you for contacting us')
+    }
+
+    
+})
