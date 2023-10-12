@@ -7,6 +7,7 @@ const modalTitle = document.getElementById('exampleModalLabel')
 const headerButton = document.getElementById('headerButn')
 
 
+
 selectBrand.addEventListener('change', ()=>{
     
     const value = selectBrand.value
