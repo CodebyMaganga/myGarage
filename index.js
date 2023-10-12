@@ -5,7 +5,22 @@ const button = document.getElementById('findButton')
 const modalText = document.getElementById('modalText')
 const modalTitle = document.getElementById('exampleModalLabel')
 const headerButton = document.getElementById('headerButn')
+const emailInput = document.getElementById('emailInput')
+const messageInput = document.getElementById('commentInput')
+const messageButton = document.getElementById('messageButton')
 
+
+
+messageButton.addEventListener('click', ()=>{
+    
+    if(!messageInput.value){
+        alert('Cant send an empty message')
+    }else{
+        alert('Your message has been sent.Thank you for contacting us')
+    }
+
+    
+})
 
 
 selectBrand.addEventListener('change', ()=>{
@@ -96,3 +111,4 @@ headerButton.addEventListener('click', ()=>{
     selectBrand.scrollIntoView({behavior: 'smooth'})
     
 })
+

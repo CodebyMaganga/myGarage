@@ -58,6 +58,7 @@ body{
 
 #header{
     background: url(images/header/pexels-cottonbro-studio-4489712.jpg) top/cover no-repeat;
+    object-fit: cover;
 }
 
 #findButton{
@@ -86,6 +87,7 @@ body{
 }
 .carousel-item{
     height: 15rem;
+    object-fit: cover;
 }
 .btn:hover{
     background-color: #f1fbff;
