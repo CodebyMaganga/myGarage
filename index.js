@@ -11,16 +11,17 @@ const emailInput = document.getElementById('emailInput')
 const messageInput = document.getElementById('commentInput')
 const messageButton = document.getElementById('messageButton')
 
-//Brand selection form
+//Fetches API data that enables user to choose from a brand of cars
 selectBrand.addEventListener('change', ()=>{
     
     const value = selectBrand.value
 
+
     while (selectModel.firstChild) {
-        selectModel.removeChild(selectModel.firstChild);
+        selectModel.removeChild(selectModel.firstChild); //clears previous content if any
     }
 
-    selectModel.innerHTML = '<option value="" disabled selected>Select a model</option>'
+    selectModel.innerHTML = '<option value="" disabled selected>Select a model</option>'  //If user hasn't selected a car brand,model option is disabled
 
     if(value === ''){
         selectModel.disabled = true;
@@ -28,7 +29,8 @@ selectBrand.addEventListener('change', ()=>{
     else{
         selectModel.disabled = false;
     }
-
+    
+    //Fetch API data and append data to brand form
     fetch(`${BASE_URL}make=${value}`, {
         method: 'GET',
         headers:{
@@ -50,12 +52,12 @@ selectBrand.addEventListener('change', ()=>{
     .catch(error => console.error('Error:', error))
 })
 
-//Find car model  according to API data
+//Modal displays with data info after button is clicked
 button.addEventListener('click', ()=>{
     const brandValue = selectBrand.value
     const modelValue = selectModel.value
 
-
+    //Fetches API data according to user's selection of car brand and model 
     fetch(`${BASE_URL}make=${brandValue}&model=${modelValue}`,{
         method: 'GET',
         headers:{
@@ -72,9 +74,10 @@ button.addEventListener('click', ()=>{
             const classType = document.createElement('p')
             const fuelConsumption = document.createElement('p')
 
-            modalText.innerHTML = ''
-            modalTitle.textContent = ''
+            modalText.innerHTML = '' //clears previous text if any
+            modalTitle.textContent = '' //clears previous text if any
 
+            // Setting up modal display content
             for (const car of data) {
                 modalTitle.textContent = `${car.make}-${car.model}`.toUpperCase()
 
@@ -84,6 +87,7 @@ button.addEventListener('click', ()=>{
                 classType.textContent = `Class: ${car.class}`
                 fuelConsumption.textContent = `Fuel Consumption: ${Math.round(((car.combination_mpg * 1.609) / 4.546))} litres/km`
 
+                //Append data to modal
                 modalText.appendChild(fuelType)
                 modalText.appendChild(engineCC)
                 modalText.appendChild(driveType)
@@ -96,14 +100,14 @@ button.addEventListener('click', ()=>{
     })
 })
 
-//Scroll to form
+//Scroll to form section when clicked
 headerButton.addEventListener('click', ()=>{
     console.log('I have been clicked')
     selectBrand.scrollIntoView({behavior: 'smooth'})
     
 })
 
-//Send message
+//Button sends an alert when clicked
 messageButton.addEventListener('click', ()=>{
     
     if(!messageInput.value){
