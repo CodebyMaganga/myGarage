@@ -1,4 +1,9 @@
+                                        myGARAGE
+=====================================================================================================
+
 This program uses a public API to fetch data and display it on the DOM
+
+LINKS: https://codebymaganga.github.io/myGarage/
 ==========================================================================
 The program enables user to such and find their car from a select brand of options given by the public API
 
@@ -12,6 +17,8 @@ The user can view details such as-:
 
 ====================================================================
 More features to be added soon!! ;-)
+
+
 
 --------------------------------------------------------------------------------
 Author:Maganga Mwambonu
